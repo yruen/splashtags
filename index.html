@@ -15,14 +15,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="main-content">
+        <div id="main" class="centralwindow">
             <canvas id="splashtag" width="700" height="200"></canvas>
-            <!-- <img src="./assets/banners/Npl_Tutorial00.png" style="display: flex;"> -->
-            <div id="tab-buttons">
+            <div id="tabcontainer">
                 <input class="tab selected" type="button" value="Text" name="tabText"><input class="tab" type="button" value="Banners" name="tabBanners"><input class="tab" type="button" value="Badges" name="tabBadges">
             </div>
             <div class="midsection">
-                <div id="data2">
+                <div class="tabcontent">
                     <!-- Probably not the best way to do this but works -->
                     <div class="entrycontainer">
                         Name2:<br>
@@ -69,10 +68,100 @@
                         <input type="color" value="#0000ff">
                     </div>
                 </div>
-                </div>
                 <a id="downloadlink" download="splashtag.png"><input id="downloadbutton" type="button" value="Download!" disabled></a>
+            </div>
+
+            <!-- Banners -->
+            <div class="tabcontent" data-name="banners" data-min="2" data-max="8" data-scale="4" style="display: none;">
+                <label class="file">
+                    (<span name="textUpload">Upload</span>)
+                    <input type="file" id="custombanner" style="display: none;" multiple accept="image/*">
+                </label>
+                <div class="spacer"></div>
+                <select id="bannersection"></select>
+                <div class="imglistcontainer"><div id="bannercontainer"></div></div>
+                <div class="scalecontainer">
+                    <button class="scale down" data-do="1"></button><button class="scale up" data-do="-1"></button>
+                </div>
+            </div>
+
+            <!-- Badges -->
+            <div class="tabcontent hidden" data-name="badges" data-min="4" data-max="20" data-scale="12" style="display: none;">
+                <label><input type="radio" name="badgenum" value="1" checked><span name="textSlot1">Slot 1</span></label> - <label><input type="radio" name="badgenum" value="2"><span name="textSlot2">Slot 2</span></label> - <label><input type="radio" name="badgenum" value="3"><span name="textSlot3">Slot 3</span></label><div class="spacer"></div><label class=>(<span name="textUpload">Upload</span>)<div class="spacer"></div><input type="file" id="custombadge" style="display: none;" multiple accept="image/*"></label> <select id="badgesection"></select>
+                <div class="imglistcontainer"><div id="badgecontainer"></div></div>
+                <div class="scalecontainer">
+                    <button class="scale down" data-do="1"></button><button class="scale up" data-do="-1"></button>
+                </div>
+            </div>
+        </div>
+            
+        <!-- credits pane -->
+        <div id="main2" class="centralwindow" style="display: none;">
+            <!-- style="font-size: 34px" -->
+            <div class="title-font">Credits</div>
+            <!-- <table> -->
+                <div class="midsection">
+                    <div class="entrycontainer">
+                        <h2>Website creator</h2>
+                        <a href="https://twitter.com/spaghettitron/">
+                            <img src="./assets/images/credits/spaghettitron.png" class="twticon">
+                            @spaghettitron
+                        </a>
+                    </div>
+                    <div class="entrycontainer">
+                        <h2>Translation help</h2>
+                        <a href="https://twitter.com/Raven_The_Cute/">
+                            <img src="./assets/images/credits/raven_the_cute.jpg" class="twticon">
+                            @Raven_The_Cute
+                        </a>
+                        </div>
+                    <div class="entrycontainer">
+                        <h2>Splatoon database</h2>
+                        <a href="https://twitter.com/LeanYoshi/">
+                            <img src="./assets/images/credits/leanyoshi.jpg" class="twticon">
+                            @LeanYoshi
+                        </a>
+                    </div>
+                    <div class="entrycontainer">
+                        <h2>Splatband banners</h2>
+                        <a href="https://twitter.com/DeadLineSMB_Art/">
+                            <img src="./assets/images/credits/deadlinesmb.jpg" class="twticon">
+                            @DeadLineSMB_Art
+                        </a>
+                    </div>
+                    <div class="entrycontainer">
+                        <h2>Special Weapon banners</h2>
+                        <a href="https://twitter.com/EIectroDev/">
+                            <img src="./assets/images/credits/electrodev.jpg" class="twticon">
+                            @EIectroDev
+                        </a>
+                    </div>
+                    <div class="entrycontainer">
+                        <h2>Splatband badges</h2>
+                        <a href="https://twitter.com/_zeeto_/">
+                            <img src="./assets/images/credits/zeeto.jpg" class="twticon">
+                            @_zeeto_
+                        </a>
+                    </div>
+                    <div class="entrycontainer">
+                        <h2>Salmon Run egg badges</h2>
+                        <a href="https://twitter.com/sharkinodraws/">
+                            <img src="./assets/images/credits/sharkinodraws.jpg" class="twticon">
+                            @sharkinodraws
+                        </a>
+                    </div>
+                    Any section labeled with "Custom" are fan-made, and are made by the awesome people above!
+                    <br>Splatoon and all related fonts and images used are property of Nintendo
+                </div>
             </div>
         </div>
     </body>
-
+    <!-- <footer>
+        <div id="showcredits">
+            <a data-alt="Hide credits" href="javascript://">Show credits</a>
+        </div>
+        <div id="languageSelector">
+            <span name="textLanguage">Language</span>: <select id="lang"></select>
+        </div>
+    </footer> -->
 </html>
