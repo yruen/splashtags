@@ -630,13 +630,73 @@ small {
     display: table-cell;
 }
 
-/* Banner color picker */
-.bannercolor{
-    bac
-    width: var(--size);
-    height: var(--size);
+/* Banner color picker icon button */
+/* TODO: this doesn't scale super well */
+.bannercolours{
+    border: none;
+    padding: 16px 16px;
+    height: auto;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
     transition: 0.1s;
 }
+
+/* TODO: this doesn't work, instead an img element is going inside the button */
+.bannercolours > *{
+    background: url("./assets/images/paintbrush.svg");
+    /* width: 50px;
+    height: 50px; */
+}
+
+.bannercolours > img{
+    size: 10px;
+}
+
+#bannerdefaultcolors{
+    display: table;
+    width: 100%;
+}
+
+#bannerdefaultcolors > *{
+    display: table-cell;
+}
+
+
+.backgroundcolor{
+    background: red;
+    /* position: absolute; */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.foregroundcolor{
+    background: blue;
+    position:relative;
+    left: 50%;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+
+.colorpicker{
+    width: 40px;
+    padding: 0;
+    height: 40px;
+    /* border-color: rgb(153, 153, 153); */
+    border: none;
+    border-radius: 50%;
+}
+
+/* This affects the shape of the inside of the color input, circular looks too repetitive though */
+/* Rendering seems inconsistent */
+/* .colorpicker::-webkit-color-swatch {
+    border-radius: 50%;
+  }
+  
+.colorpicker::-moz-color-swatch {
+    border-radius: 50%;
+  } */

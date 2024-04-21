@@ -129,21 +129,71 @@
                                     (<span name="textUpload">Upload</span>)<input type="file" id="custombanner" style="display: none;" multiple accept="image/*">
                                 </label>
                                 <select id="bannersection"></select>
-                                <div class="bannercolor">paintbrush</div>
+                                <!-- Popover works on all modern browsers now, firefox barely added support in 125 -->
+                                <div><button class="bannercolours" popovertarget="bannercolourselector" popovertargetaction="show" title="bannercolours">
+                                    <!-- <img src="./assets/images/paintbrush.svg"> -->
+                                </button></div>
+                            </div>
+
+                            <div id="bannercolourselector" popover>
+                                Default
+                                <!-- Row of selectable colors -->
+                                <div id="bannerdefaultcolors">
+                                    <!-- encapsules the selection colors -->
+                                    <div class="finishedcolor">
+                                        <!-- the color on the bottom -->
+                                        <div class="backgroundcolor">
+                                            <!-- foreground colors -->
+                                            <div class="foregroundcolor">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- encapsules the selection colors -->
+                                    <div class="finishedcolor">
+                                        <!-- the color on the bottom -->
+                                        <div class="backgroundcolor">
+                                            <!-- foreground colors -->
+                                            <div class="foregroundcolor">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                Custom
+                                <div class="rowmenu" id="bannercustomcolors">
+                                    <!-- encapsules the selection colors -->
+                                    <div class="finishedcolor">
+                                        <!-- the color on the bottom -->
+                                        <div class="backgroundcolor">
+                                            <!-- foreground colors -->
+                                            <div class="foregroundcolor">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="spacer"></div>
+                                    <!-- Hard coded to test layout -->
+                                    <input type="color" class="colorpicker" id="color-1"/>
+                                    <input type="color" class="colorpicker" id="color-2"/>
+                                    <input type="color" class="colorpicker" id="color-3"/>
+                                    <input type="color" class="colorpicker" id="color-4"/>
+                                </div>
+                            
+                                
                             </div>
 
                                 <div class="imglistcontainer">
                                     <div id="bannercontainer"></div>
                                 </div>
                             <div class="bottomcontainer">
-                                <div id="bannercolours" style="display: inline;">
+                                <button class="scale down" data-do="1"></button><button class="scale up" data-do="-1"></button>
+                                <!-- the div.bannercolours is needed or else the site breaks -->
+                                <div id="bannercolours" style="display: block;">
                                     <span name="textColour">Colour</span> 
                                     <input type="color" value="#ffffff"> 
                                     <input type="color" value="#ff0000"> 
                                     <input type="color" value="#00ff00"> 
                                     <input type="color" value="#0000ff">
                                 </div>
-                                <button class="scale down" data-do="1"></button><button class="scale up" data-do="-1"></button>
                             </div>
                         </div>
 
