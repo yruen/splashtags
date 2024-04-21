@@ -618,3 +618,25 @@ small {
 .delete {
     background-image: url("./assets/images/delete.svg");
 }
+
+/* Added content for row menu */
+.rowmenu{
+    /* Maybe this could be replaced by flexbox, idk */
+    display: table; 
+    width: 100%;
+}
+
+.rowmenu > *{
+    display: table-cell;
+}
+
+/* Banner color picker */
+.bannercolor{
+    bac
+    width: var(--size);
+    height: var(--size);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.1s;
+}

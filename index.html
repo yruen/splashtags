@@ -122,10 +122,27 @@
 
                         <!-- Banners -->
                         <div class="tabcontent hidden" data-name="banners" data-min="2" data-max="8" data-scale="4" style="--items: 4;">
-                            <label class="file">(<span name="textUpload">Upload</span>)<input type="file" id="custombanner" style="display: none;" multiple accept="image/*"></label><div class="spacer"></div><select id="bannersection"></select>
-                            <div class="imglistcontainer"><div id="bannercontainer"></div></div>
+                            <!-- Row of top menu options -->
+                            <!-- TODO add: justify-content: space-between -->
+                            <div class="rowmenu">
+                                <label class="file">
+                                    (<span name="textUpload">Upload</span>)<input type="file" id="custombanner" style="display: none;" multiple accept="image/*">
+                                </label>
+                                <select id="bannersection"></select>
+                                <div class="bannercolor">paintbrush</div>
+                            </div>
+
+                                <div class="imglistcontainer">
+                                    <div id="bannercontainer"></div>
+                                </div>
                             <div class="bottomcontainer">
-                                <div id="bannercolours" style="display: inline;"><span name="textColour">Colour</span> <input type="color" value="#ffffff"> <input type="color" value="#ff0000"> <input type="color" value="#00ff00"> <input type="color" value="#0000ff"></div>
+                                <div id="bannercolours" style="display: inline;">
+                                    <span name="textColour">Colour</span> 
+                                    <input type="color" value="#ffffff"> 
+                                    <input type="color" value="#ff0000"> 
+                                    <input type="color" value="#00ff00"> 
+                                    <input type="color" value="#0000ff">
+                                </div>
                                 <button class="scale down" data-do="1"></button><button class="scale up" data-do="-1"></button>
                             </div>
                         </div>
